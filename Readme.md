@@ -1,7 +1,7 @@
 ## Introduction
 This project collect some programs and scripts for your just installed Linux (Ubuntu). \
 Here you can find aliases, tricks, useful things for your interpreter. \
-Tested on `bash5.1.8(1)-release`\
+Tested on `bash5.1.8(1)-release` \
 Features:
 - Function `newalias` with easy control aliases and self update
 - File with after-install recommendations
@@ -21,11 +21,11 @@ touch $(pwd)/.newalias/newalias-private.sh
 echo ". $(pwd)/.newalias/newalias-private.sh" >> /etc/bash.bashrc
 ```
 
-## After just install OS / first start recommendations
+## Additionally, after just install OS / first start recommendations
 ```shell
 # Install useful programs
 sudo apt-get update
-sudo apt-get -y install keepassxc git make mc nano nmap sshpass
+sudo apt-get -y install keepassxc git make mc nano nmap sshpass bash-completion cmatrix cheese
 # Download and install chrome and telegram
 firefox https://www.google.ru/chrome/ https://desktop.telegram.org/
 cd ~/Downloads 2> /dev/null || cd ~/Загрузки
