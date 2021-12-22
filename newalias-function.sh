@@ -36,7 +36,7 @@ ${sb}-p${eb}, --private-edit   Edit your private file with aliases.
 
 -t, --test           Test config for check editor and browser existence.
 
--r, --readme         Show readme for get all useful data.
+-r, --readme         Show readme for get more useful tips.
 "
         ;;
         -p|--private-edit )
@@ -46,16 +46,19 @@ ${sb}-p${eb}, --private-edit   Edit your private file with aliases.
             sudo $NEWALIAS_EDITOR $NEWALIAS_DIR/newalias-dist.sh && . /etc/bash.bashrc
         ;;
         -c|--dist-compare )
-            echo ''
+            LATEST_DIST=$(curl -s "https://api.github.com/repos/makhnanov/newalias/commits/main" | jq '."sha"' | xargs)
+            $NEWALIAS_BROWSER https://github.com/makhnanov/newalias/compare/$(git -C $NEWALIAS_DIR log -1 --format="%H")..$LATEST_DIST
         ;;
         -u|--self-update )
-            echo ''
+            git -C $NEWALIAS_DIR pull
         ;;
         -e|--config-edit )
             $NEWALIAS_EDITOR $NEWALIAS_DIR/newalias.conf
         ;;
         -v|--version )
-            echo ''
+            echo Version: $(cat $NEWALIAS_DIR/version.txt)
+            echo Branch: $(git -C $NEWALIAS_DIR rev-parse --abbrev-ref HEAD)
+            echo Commit SHA: $(git -C $NEWALIAS_DIR log -1 --format="%H")
         ;;
         -t|--test )
             if [[ -f "$NEWALIAS_BROWSER" ]]; then
