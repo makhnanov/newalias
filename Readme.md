@@ -23,6 +23,9 @@ echo ". $(pwd)/.newalias/newalias-private.sh" >> /etc/bash.bashrc
 
 ## Additionally, after just install OS / first start recommendations
 ```shell
+# Fix bluetooth problems
+https://github.com/winterheart/broadcom-bt-firmware
+
 # Fast entrance to server
 alias serv='sshpass -p VerySecretPassword ssh root@ip.v4.address.dist'
 
@@ -71,4 +74,11 @@ sudo apt-get install sublime-text
 # Generate new SSH key pair
 ssh-keygen -t ed25519 -C "your_email@example.com"
 cat $(pwd)/.ssh/id_ed25519.pub
+
+# Download and install Postman Canary
+google-chrome https://www.postman.com/downloads/canary/
+sudo mkdir /opt/PostmanCanary
+sudo chmod -R 777 /opt/PostmanCanary
+tar -xvf PostmanCanary-* -C /opt/PostmanCanary
+/opt/PostmanCanary/PostmanCanary/PostmanCanary
 ```
