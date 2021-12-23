@@ -82,3 +82,4 @@ sudo chmod -R 777 /opt/PostmanCanary
 tar -xvf PostmanCanary-* -C /opt/PostmanCanary
 /opt/PostmanCanary/PostmanCanary/PostmanCanary
 ```
+
