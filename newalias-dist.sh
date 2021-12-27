@@ -25,3 +25,5 @@ alias yii='php yii'
 alias matrix='cmatrix -B'
 
 alias git-cle='git config --local -e'
+
+alias docker-stop-all='docker stop $(docker ps -aq)'

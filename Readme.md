@@ -32,7 +32,10 @@ alias serv='sshpass -p VerySecretPassword ssh root@ip.v4.address.dist'
 # Install useful programs
 sudo apt-get update
 sudo apt-get -y install keepassxc git make mc nano nmap sshpass bash-completion cmatrix cheese translate-shell \
-     cowsay jq
+     cowsay jq net-tools
+
+# Show network addresses
+hostname -I # ifconfig -a
 
 # Fix chrome require unlock keyring 
 /usr/bin/google-chrome-stable %U --password-store=basic
