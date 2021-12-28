@@ -71,7 +71,10 @@ sudo apt-get -y install keepassxc git make mc nano nmap sshpass bash-completion 
      cowsay jq net-tools htop filezilla
 
 # Show network addresses
-hostname -I # ifconfig -a
+hostname -I
+ifconfig -a
+ip addr show eth0 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
+curl -4 icanhazip.com
 
 # Fix chrome require unlock keyring 
 /usr/bin/google-chrome-stable %U --password-store=basic
@@ -362,6 +365,12 @@ server {
 - Test nginx config
 ```shell
 nginx -t
+```
+
+- Включение / выключение автостарта
+```shell
+sudo systemctl enable nginx
+sudo systemctl disable nginx
 ```
 
 ## Docker
