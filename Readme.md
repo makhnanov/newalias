@@ -1,5 +1,4 @@
 # Newalias
-___
 
 ## Introduction
 This project collect some programs and scripts for your just installed Linux (Ubuntu). \
