@@ -8,35 +8,35 @@ newalias() {
         -h|--help )
             echo -e \
 "${sb}Usage:${eb}
-newalias [parameter]
+  newalias [parameter]
 
 ${sb}Configuration:${eb}
-Directory: $NEWALIAS_DIR
-Dist aliases:  $NEWALIAS_DIR/newalias-dist.sh
-Private aliases:  $NEWALIAS_DIR/newalias-private.sh
-Editor: $NEWALIAS_EDITOR
-Browser: $NEWALIAS_BROWSER
-Configuration file: $NEWALIAS_DIR/newalias.conf
+  Directory: $NEWALIAS_DIR
+  Dist aliases:  $NEWALIAS_DIR/newalias-dist.sh
+  Private aliases:  $NEWALIAS_DIR/newalias-private.sh
+  Editor: $NEWALIAS_EDITOR
+  Browser: $NEWALIAS_BROWSER
+  Configuration file: $NEWALIAS_DIR/newalias.conf
 
 ${sb}Parameters:${eb}
--h, --help           This message with parameters description.
+  -h, --help           This message with parameters description.
 
-${sb}-p${eb}, --private-edit   Edit your private file with aliases.
+  ${sb}-p${eb}, --private-edit   Edit your private file with aliases.
 
--d, --dist-edit      Edit dist public file with aliases.
-                     Not recommend for edit if you are not contributor.
+  -d, --dist-edit      Edit dist public file with aliases.
+                       Not recommend for edit if you are not contributor.
 
--c, --dist-compare   Open browser to compare changes with version of your public aliases and github version.
+  -c, --dist-compare   Open browser to compare changes with version of your public aliases and github version.
 
--u, --self-update    Self update (git pull) for get new public aliases.
+  -u, --self-update    Self update (git pull) for get new public aliases.
 
--e, --config-edit    Configure editor and browser for work with newalias, and github check updates.
+  -e, --config-edit    Configure editor and browser for work with newalias, and github check updates.
 
--v, --version        Show current version and git commit sha.
+  -v, --version        Show current version and git commit sha.
 
--t, --test           Test config for check editor and browser existence.
+  -t, --test           Test config for check editor and browser existence.
 
--r, --readme         Show readme for get more useful tips.
+  -r, --readme         Show readme for get more useful tips.
 "
         ;;
         -p|--private-edit )

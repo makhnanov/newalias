@@ -25,37 +25,37 @@ echo ". $(pwd)/.newalias/newalias-private.sh" >> /etc/bash.bashrc
 ```
 
 ## newalias -h
-```pan
+```shell
 Usage:
-newalias [parameter]
+    newalias [parameter]
 
 Configuration:
-Directory: /home/roman/.newalias
-Dist aliases:  /home/roman/.newalias/newalias-dist.sh
-Private aliases:  /home/roman/.newalias/newalias-private.sh
-Editor: /usr/bin/nano
-Browser: /usr/bin/google-chrome
-Configuration file: /home/roman/.newalias/newalias.conf
+    Directory: /home/roman/.newalias
+    Dist aliases:  /home/roman/.newalias/newalias-dist.sh
+    Private aliases:  /home/roman/.newalias/newalias-private.sh
+    Editor: /usr/bin/nano
+    Browser: /usr/bin/google-chrome
+    Configuration file: /home/roman/.newalias/newalias.conf
 
 Parameters:
--h, --help           This message with parameters description.
-
--p, --private-edit   Edit your private file with aliases.
-
--d, --dist-edit      Edit dist public file with aliases.
-                     Not recommend for edit if you are not contributor.
-
--c, --dist-compare   Open browser to compare changes with version of your public aliases and github version.
-
--u, --self-update    Self update (git pull) for get new public aliases.
-
--e, --config-edit    Configure editor and browser for work with newalias, and github check updates.
-
--v, --version        Show current version and git commit sha.
-
--t, --test           Test config for check editor and browser existence.
-
--r, --readme         Show readme for get more useful tips.
+    -h, --help           This message with parameters description.
+    
+    -p, --private-edit   Edit your private file with aliases.
+    
+    -d, --dist-edit      Edit dist public file with aliases.
+                         Not recommend for edit if you are not contributor.
+    
+    -c, --dist-compare   Open browser to compare changes with version of your public aliases and github version.
+    
+    -u, --self-update    Self update (git pull) for get new public aliases.
+    
+    -e, --config-edit    Configure editor and browser for work with newalias, and github check updates.
+    
+    -v, --version        Show current version and git commit sha.
+    
+    -t, --test           Test config for check editor and browser existence.
+    
+    -r, --readme         Show readme for get more useful tips.
 ```
 
 ## Additionally, after just install OS / first start recommendations
@@ -181,7 +181,7 @@ ufw enable # ufw allow 'OpenSSH'
 ```
 
 - Default /etc/nginx/nginx.conf in nginx/1.14.0 (Ubuntu)
-```pan
+```shell
 user www-data;
 worker_processes auto;
 pid /run/nginx.pid;
@@ -267,7 +267,7 @@ http {
 #}
 ```
 - Default /etc/nginx/sites-available/default in nginx/1.14.0 (Ubuntu)
-```pan
+```shell
 ##
 # You should look at the following URL's in order to grasp a solid understanding
 # of Nginx configuration files in order to fully unleash the power of Nginx.
