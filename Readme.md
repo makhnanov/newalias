@@ -25,7 +25,7 @@ echo ". $(pwd)/.newalias/newalias-private.sh" >> /etc/bash.bashrc
 ```
 
 ## newalias -h
-```shell
+```text
 Usage:
     newalias [parameter]
 
@@ -181,7 +181,7 @@ ufw enable # ufw allow 'OpenSSH'
 ```
 
 - Default /etc/nginx/nginx.conf in nginx/1.14.0 (Ubuntu)
-```shell
+```pan
 user www-data;
 worker_processes auto;
 pid /run/nginx.pid;
@@ -267,7 +267,7 @@ http {
 #}
 ```
 - Default /etc/nginx/sites-available/default in nginx/1.14.0 (Ubuntu)
-```shell
+```pan
 ##
 # You should look at the following URL's in order to grasp a solid understanding
 # of Nginx configuration files in order to fully unleash the power of Nginx.
