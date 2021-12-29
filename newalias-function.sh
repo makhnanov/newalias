@@ -47,7 +47,8 @@ ${sb}Parameters:${eb}
         ;;
         -c|--dist-compare )
             LATEST_DIST=$(curl -s "https://api.github.com/repos/makhnanov/newalias/commits/main" | jq '."sha"' | xargs)
-            $NEWALIAS_BROWSER https://github.com/makhnanov/newalias/compare/$(git -C $NEWALIAS_DIR log -1 --format="%H")..$LATEST_DIST
+            LINK=https://github.com/makhnanov/newalias/compare/$(git -C $NEWALIAS_DIR log -1 --format="%H")..$LATEST_DIST
+            $NEWALIAS_BROWSER $LINK || echo $LINK
         ;;
         -u|--self-update )
             git -C $NEWALIAS_DIR pull

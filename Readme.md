@@ -171,7 +171,7 @@ sudo find / -type f -name '*.log' 2>/dev/null
 
 ### Programs
 ```shell
-apt-get -y install htop nano mc git
+apt-get -y install htop nano mc git jq curl
 ```
 
 ### Nginx
