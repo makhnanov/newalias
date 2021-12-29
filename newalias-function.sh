@@ -55,10 +55,12 @@ ${sb}Parameters:${eb}
             fi
         ;;
         -u|--self-update )
-            git -C $NEWALIAS_DIR pull && . /etc/bash.bashrc
+            git -C $NEWALIAS_DIR pull
+            . /etc/bash.bashrc
         ;;
         -e|--config-edit )
-            $NEWALIAS_EDITOR $NEWALIAS_DIR/newalias.conf && . /etc/bash.bashrc
+            $NEWALIAS_EDITOR $NEWALIAS_DIR/newalias.conf
+            . /etc/bash.bashrc
         ;;
         -v|--version )
             echo Version: $(cat $NEWALIAS_DIR/version.txt)
