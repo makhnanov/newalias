@@ -27,3 +27,9 @@ alias matrix='cmatrix -B'
 alias git-cle='git config --local -e'
 
 alias docker-stop-all='docker stop $(docker ps -aq)'
+
+alias nginx-conf='mc /etc/nginx'
+alias nginx-reload='service nginx reload'
+alias nginx-stop='service nginx stop'
+alias nginx-start='service nginx start'
+alias nginx-restart='service nginx restart'

@@ -77,8 +77,8 @@ ${sb}Parameters:${eb}
             echo -e "$(cat $NEWALIAS_DIR/Readme.md | sed 's|^#.*|\\033[1m&\\033[0m|g')"
         ;;
         * )
-            echo "Undefined parameter $1. Use:"
-            echo 'newalias help # For read more'
+            echo "Unexpected parameter $1"
+            echo 'newalias -h # For get help and read more.'
         ;;
     esac
 }

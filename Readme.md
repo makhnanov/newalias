@@ -13,6 +13,7 @@ Features:
 ## Installation
 ```shell
 # Clone project to home hidden dir
+cd ~
 git clone https://github.com/makhnanov/newalias.git $(pwd)/.newalias
 # Become god
 sudo su
@@ -56,6 +57,9 @@ Parameters:
     
     -r, --readme         Show readme for get more useful tips.
 ```
+
+## Private aliases
+### [Here](https://github.com/makhnanov/newalias/blob/main/newalias-dist.sh) or use `newalias -d`
 
 ## Additionally, after just install OS / first start recommendations
 ```shell
@@ -167,7 +171,7 @@ sudo find / -type f -name '*.log' 2>/dev/null
 
 ### Programs
 ```shell
-apt-get -y install htop nano mc
+apt-get -y install htop nano mc git
 ```
 
 ### Nginx
@@ -373,4 +377,36 @@ sudo systemctl enable nginx
 sudo systemctl disable nginx
 ```
 
+- Redirect from HTTP to HTTPS
+```
+server {
+    listen 80 default_server;
+    server_name  example.com;
+    return 302 https://$server_name$request_uri;
+}
+```
+
+- Set HTTPS / SSL
+```
+server {
+    gzip off;
+
+    listen 443 ssl http2 default_server;
+    listen [::]:443 ssl http2 default_server;
+
+    ssl_certificate certs/expert.crt;
+    ssl_certificate_key certs/expert.key;
+    ...
+}
+```
+
+- Troubleshooting with crt / key
+```
+-----BEGIN TRUSTED CERTIFICATE-----
+-----END TRUSTED CERTIFICATE-----
+-----BEGIN RSA PRIVATE KEY-----
+-----END RSA PRIVATE KEY-----
+```
+
 ## Docker
+WIP
