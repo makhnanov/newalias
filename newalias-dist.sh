@@ -8,7 +8,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
-alias c='clear'
+alias c=clear
 
 alias nrest='sudo service nginx restart'
 alias nconf='sudo mc /etc/nginx'
@@ -34,3 +34,6 @@ alias nginx-reload='service nginx reload'
 alias nginx-stop='service nginx stop'
 alias nginx-start='service nginx start'
 alias nginx-restart='service nginx restart'
+
+alias d=docker
+alias dc='docker compose'
