@@ -1,16 +1,18 @@
 ![Newalias](https://github.com/makhnanov/newalias/blob/main/newalias.png?raw=true)
 
 ## Introduction
-This project collect some programs and scripts for your just installed Linux (Ubuntu). \
 Here you can find aliases, tricks, useful things prefer for bash interpreter. \
+This project collect some programs and scripts for your just installed Linux (Ubuntu). \
 Tested on `bash5.1.8(1)-release` \
 Features:
 - Function `newalias` with easy control aliases and self update
-- File with after-install recommendations
 - File with dist aliases
-- File with private aliases
+- File with you private aliases (unversioned)
+- After-install recommendations
+- Default configs for some services
+- Troubleshooting for some problems
 
-## Installation
+## Installation via git
 ```shell
 # Clone project to home hidden dir
 cd ~
