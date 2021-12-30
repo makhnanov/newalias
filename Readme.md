@@ -58,7 +58,7 @@ Parameters:
     -r, --readme         Show readme for get more useful tips.
 ```
 
-## Private aliases
+## Distributed aliases
 ### [Here](https://github.com/makhnanov/newalias/blob/main/newalias-dist.sh) or use `newalias -d`
 
 ## Additionally, after just install OS / first start recommendations
