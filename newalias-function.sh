@@ -40,10 +40,10 @@ ${sb}Parameters:${eb}
 "
         ;;
         -p|--private-edit )
-            sudo $NEWALIAS_EDITOR $NEWALIAS_DIR/newalias-private.sh && . /etc/bash.bashrc
+            sudo $NEWALIAS_EDITOR $NEWALIAS_DIR/newalias-private.sh
         ;;
         -d|--dist-edit )
-            sudo $NEWALIAS_EDITOR $NEWALIAS_DIR/newalias-dist.sh && . /etc/bash.bashrc
+            sudo $NEWALIAS_EDITOR $NEWALIAS_DIR/newalias-dist.sh
         ;;
         -c|--dist-compare )
             LATEST_DIST=$(curl -s "https://api.github.com/repos/makhnanov/newalias/commits/main" | jq '."sha"' | xargs)
@@ -56,11 +56,9 @@ ${sb}Parameters:${eb}
         ;;
         -u|--self-update )
             git -C $NEWALIAS_DIR pull
-            . /etc/bash.bashrc
         ;;
         -e|--config-edit )
             $NEWALIAS_EDITOR $NEWALIAS_DIR/newalias.conf
-            . /etc/bash.bashrc
         ;;
         -v|--version )
             echo Version: $(cat $NEWALIAS_DIR/version.txt)
@@ -79,6 +77,7 @@ ${sb}Parameters:${eb}
                 echo -e "${sb}Problem with NEWALIAS_EDITOR.${eb} $NEWALIAS_EDITOR does not exist."
             fi
             echo -e "Configuration file: \n$NEWALIAS_DIR/newalias.conf"
+            # todo add interpreter
         ;;
         -r|--readme )
             echo -e "$(cat $NEWALIAS_DIR/Readme.md | sed 's|^#.*|\\033[1m&\\033[0m|g')"
@@ -88,6 +87,8 @@ ${sb}Parameters:${eb}
             echo 'newalias -h # For get help and read more.'
         ;;
     esac
+    . /etc/bash.bashrc
+    exec $NEWALIAS_INTERPRETER
 }
 
 _newalias() {

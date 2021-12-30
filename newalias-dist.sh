@@ -37,3 +37,4 @@ alias nginx-restart='service nginx restart'
 
 alias d=docker
 alias dc='docker compose'
+alias hooks='xfce4-terminal -e "mc .git/hooks/"'

@@ -1,4 +1,4 @@
-# Newalias
+![Newalias](https://github.com/makhnanov/newalias/blob/main/newalias.png?raw=true)
 
 ## Introduction
 This project collect some programs and scripts for your just installed Linux (Ubuntu). \
@@ -72,7 +72,7 @@ alias serv='sshpass -p VerySecretPassword ssh root@ip.v4.address.dist'
 # Install useful programs
 sudo apt-get update
 sudo apt-get -y install keepassxc git make mc nano nmap sshpass bash-completion cmatrix cheese translate-shell \
-     cowsay jq net-tools htop filezilla
+     cowsay jq net-tools htop filezilla rsync
 
 # Show network addresses
 hostname -I
@@ -171,7 +171,7 @@ sudo find / -type f -name '*.log' 2>/dev/null
 
 ### Programs
 ```shell
-apt-get -y install htop nano mc git jq curl
+apt-get -y install htop nano mc git jq curl rsync
 ```
 
 ### Nginx
