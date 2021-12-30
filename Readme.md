@@ -7,8 +7,8 @@ Tested on `bash5.1.8(1)-release` \
 Features:
 - Function `newalias` with easy control aliases and self update
 - File with dist aliases
-- File with you private aliases (unversioned)
-- After-install recommendations
+- File with your private aliases (unversioned)
+- After-install recommendations for PC or VPS
 - Default configs for some services
 - Troubleshooting for some problems
 
