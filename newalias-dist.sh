@@ -39,3 +39,4 @@ alias d=docker
 alias dc='docker compose'
 alias hooks='xfce4-terminal -e "mc .git/hooks/"'
 alias docker-rm-all='docker rm $(docker ps -aq)'
+alias rm-vendor='sudo rm -rf vendor/'
