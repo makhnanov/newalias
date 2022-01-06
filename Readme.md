@@ -234,4 +234,12 @@ server {
 ```
 
 ## Docker
-WIP
+COMPOSE=docker compose
+
+docker network ls 
+
+$(COMPOSE) down
+
+docker rm -f $(docker ps -aq)
+docker volume rm $(docker volume ls -q)
+docker network prune -f
