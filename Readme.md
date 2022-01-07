@@ -253,3 +253,7 @@ $(COMPOSE) down
 docker rm -f $(docker ps -aq)
 docker volume rm $(docker volume ls -q)
 docker network prune -f
+
+## Git
+git config --global init.defaultBranch main
+git branch -m main
