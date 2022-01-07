@@ -233,6 +233,16 @@ server {
 -----END RSA PRIVATE KEY-----
 ```
 
+#### Install OBS Studio
+```
+xdg-open https://obsproject.com/wiki/install-instructions#linux-install-directions
+sudo apt -y install ffmpeg
+sudo apt -y install v4l2loopback-dkms
+sudo add-apt-repository ppa:obsproject/obs-studio
+sudo apt update
+sudo apt -y install obs-studio
+```
+
 ## Docker
 COMPOSE=docker compose
 
