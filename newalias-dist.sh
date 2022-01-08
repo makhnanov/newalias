@@ -34,6 +34,7 @@ alias nginx-reload='service nginx reload'
 alias nginx-stop='service nginx stop'
 alias nginx-start='service nginx start'
 alias nginx-restart='service nginx restart'
+alias nginx-error='mc /var/log/nginx'
 
 alias d=docker
 alias dc='docker compose'
