@@ -26,8 +26,6 @@ alias matrix='cmatrix -B'
 
 alias git-cle='git config --local -e'
 
-alias docker-stop-all='docker stop $(docker ps -aq)'
-
 alias nginx-conf='mc /etc/nginx'
 alias nginx-status='service nginx status'
 alias nginx-reload='service nginx reload'
@@ -38,6 +36,10 @@ alias nginx-error='mc /var/log/nginx'
 
 alias d=docker
 alias dc='docker compose'
+alias docker-stop-all='docker stop $(docker ps -aq)'
+alias docker-rm-all-containers='docker rm $(docker ps -aq)'
+alias docker-rm-all-volumes='docker volume rm $(docker volume ls -q)'
+alias docker-rm-all-images='docker rmi $(docker images -q)'
+
 alias hooks='xfce4-terminal -e "mc .git/hooks/"'
-alias docker-rm-all='docker rm $(docker ps -aq)'
 alias rm-vendor='sudo rm -rf vendor/'
