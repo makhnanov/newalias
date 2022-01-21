@@ -43,3 +43,5 @@ alias docker-rm-all-images='docker rmi $(docker images -q)'
 
 alias hooks='xfce4-terminal -e "mc .git/hooks/"'
 alias rm-vendor='sudo rm -rf vendor/'
+
+alias suspend='systemctl suspend'
