@@ -167,6 +167,12 @@ sudo find / -type d -name 'log' 2>/dev/null
 # Find file by regex
 sudo find / -type f -name '*.log' 2>/dev/null
 
+# Install latest PHP
+sudo apt update
+sudo apt -y install lsb-release ca-certificates apt-transport-https software-properties-common
+sudo add-apt-repository ppa:ondrej/php
+sudo apt -y install php8.1
+
 ```
 
 ## VPS / VDS
