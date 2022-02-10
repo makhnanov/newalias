@@ -171,7 +171,7 @@ sudo find / -type f -name '*.log' 2>/dev/null
 sudo apt update
 sudo apt -y install lsb-release ca-certificates apt-transport-https software-properties-common
 sudo add-apt-repository ppa:ondrej/php
-sudo apt -y install php8.1
+sudo apt -y install php8.1 php8.1-xml
 
 ```
 
