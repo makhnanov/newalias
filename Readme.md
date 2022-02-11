@@ -173,6 +173,9 @@ sudo apt -y install lsb-release ca-certificates apt-transport-https software-pro
 sudo add-apt-repository ppa:ondrej/php
 sudo apt -y install php8.1 php8.1-xml
 
+# Disable / enable apache2 autostart
+sudo update-rc.d apache2 disable
+sudo update-rc.d apache2 enable
 ```
 
 ## VPS / VDS
