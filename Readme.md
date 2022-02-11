@@ -123,6 +123,10 @@ sudo apt-get install sublime-text
 ssh-keygen -t ed25519 -C "your_email@example.com"
 cat $(pwd)/.ssh/id_ed25519.pub
 
+# Add additional git host
+sudo nano ~/.ssh/config
+[Content](https://github.com/makhnanov/newalias/blob/main/git/config.conf)
+
 # Download and install Postman Canary
 xdg-open https://www.postman.com/downloads/canary/
 sudo mkdir /opt/PostmanCanary
