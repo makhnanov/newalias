@@ -257,15 +257,18 @@ sudo apt -y install obs-studio
 ```
 
 ## Docker
-COMPOSE=docker compose
-
-docker network ls 
-
-$(COMPOSE) down
+docker login -u username -p password host
 
 docker rm -f $(docker ps -aq)
 docker volume rm $(docker volume ls -q)
 docker network prune -f
+
+COMPOSE=docker compose
+
+docker network ls 
+
+$(COMPOSE) up --detach --remove-orphans --force-recreate --build
+$(COMPOSE) down
 
 ## Git
 git config --global init.defaultBranch main

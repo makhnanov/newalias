@@ -24,7 +24,8 @@ alias yii='php yii'
 
 alias matrix='cmatrix -B'
 
-alias git-cle='git config --local -e'
+alias git-config-local='git config --local -e'
+alias git-exclude-local='nano .git/info/exclude'
 
 alias nginx-conf='mc /etc/nginx'
 alias nginx-status='service nginx status'
