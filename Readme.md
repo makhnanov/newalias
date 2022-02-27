@@ -84,18 +84,37 @@ curl -4 icanhazip.com
 
 # Fix chrome require unlock keyring 
 /usr/bin/google-chrome-stable %U --password-store=basic
+```
 
-# Download and install chrome and telegram
-firefox https://www.google.ru/chrome/ https://desktop.telegram.org/
+### Download and install chrome
+```shell
+# xdg-open https://www.google.ru/chrome/
 cd ~/Downloads 2> /dev/null || cd ~/Загрузки
 sudo dpkg -i google-chrome
 rm google-chrome*
-sudo mkdir /opt/Telegram
-sudo chmod -R 777 /opt/Telegram
-tar -xvf tsetup* -C /opt/Telegram
-/opt/Telegram$ Telegram/Telegram
-rm tsetup*
+```
 
+### Download and install telegram
+```shell
+sudo bash -c "wget -O /opt/tg.tar https://telegram.org/dl/desktop/linux && \
+  tar -xvf /opt/tg.tar --directory=/opt && \
+  rm /opt/tg.tar"
+/opt/Telegram/Telegram
+
+# Desktop shortcut /usr/share/applications
+# https://github.com/telegramdesktop/tdesktop/blob/10e7bd0d6eb02c05b49680ad9c3c9270f34c82e9/lib/xdg/telegramdesktop.desktop
+```
+
+### Download and install jetbrains toolbox
+```shell
+sudo bash -c "wget -O /opt/toolbox.tar.gz \
+  $(curl -s "https://data.services.jetbrains.com/products/releases?code=TBA&latest=true&type=release" | jq '.TBA | .[].downloads.linux.link' | xargs) && \
+  tar -xvf /opt/toolbox.tar.gz --directory=/opt && \
+  rm /opt/toolbox.tar.gz"
+$(find /opt/ -iname jetbrains-toolbox)
+```
+
+```shell
 # Test SSD/HDD io speed
 sudo apt-get -y install fio
 fio --randrepeat=1 --ioengine=libaio --direct=1 --gtod_reduce=1 --name=fiotest --filename=testfio --bs=4k --iodepth=64 --size=8G --readwrite=randrw --rwmixread=75
@@ -103,13 +122,6 @@ fio --randrepeat=1 --ioengine=libaio --direct=1 --gtod_reduce=1 --name=fiotest -
 # Test SSD/HDD ping
 sudo apt-get -y install ioping
 ioping -c 20 /tmp/
-
-# Download and install jetbrains toolbox
-xdg-open https://www.jetbrains.com/toolbox-app/
-sudo mkdir /opt/JBToolbox
-sudo chmod -R 777 /opt/JBToolbox
-tar -xvf jetbrains-toolbox* -C /opt/JBToolbox
-/opt/JBToolbox/jetbrains-toolbox-*/jetbrains-toolbox
 
 # Download and install sublime text
 xdg-open https://www.sublimetext.com/docs/linux_repositories.html
@@ -165,7 +177,18 @@ sudo mkdir -p /usr/local/lib/docker/cli-plugins
 sudo chmod 777 /usr/local/lib/docker/cli-plugins
 sudo curl -SL https://github.com/docker/compose/releases/download/v2.2.2/docker-compose-linux-x86_64 -o /usr/local/lib/docker/cli-plugins/docker-compose
 sudo chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
+```
 
+#### Download and install good docker containers viewer
+```shell
+# xdg-open https://github.com/bcicen/ctop
+echo "deb http://packages.azlux.fr/debian/ buster main" | sudo tee /etc/apt/sources.list.d/azlux.list
+wget -qO - https://azlux.fr/repo.gpg.key | sudo apt-key add -
+sudo apt update
+sudo apt install docker-ctop
+```
+
+```shell
 # Find dir by regex
 sudo find / -type d -name 'log' 2>/dev/null
 # Find file by regex
@@ -257,6 +280,7 @@ sudo apt -y install obs-studio
 ```
 
 ## Docker
+```shell
 docker login -u username -p password host
 
 docker rm -f $(docker ps -aq)
@@ -269,7 +293,15 @@ docker network ls
 
 $(COMPOSE) up --detach --remove-orphans --force-recreate --build
 $(COMPOSE) down
+```
 
 ## Git
+```shell
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+git config --global core.editor nano
 git config --global init.defaultBranch main
+git config --list
+git config user.name
 git branch -m main
+```
