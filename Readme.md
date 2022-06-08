@@ -256,20 +256,32 @@ sudo apt update
 sudo apt -y install obs-studio
 ```
 
-## Docker
-docker login -u username -p password host
 
+## Docker
+### Fix docker in container dns / internet troubles
+Create ```/etc/docker/daemon.json```
+```json
+{
+"dns": ["8.8.8.8"]
+}
+```
+### Login
+```
+docker login -u username -p password host
+```
+### Other
+```shell
 docker rm -f $(docker ps -aq)
 docker volume rm $(docker volume ls -q)
 docker network prune -f
-
-COMPOSE=docker compose
-
-docker network ls 
-
+docker network ls
+COMPOSE=docker compose \
 $(COMPOSE) up --detach --remove-orphans --force-recreate --build
 $(COMPOSE) down
+```
 
 ## Git
+```shell
 git config --global init.defaultBranch main
 git branch -m main
+```
