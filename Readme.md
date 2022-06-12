@@ -323,3 +323,6 @@ git config --list
 git config user.name
 git branch -m main
 ```
+
+## Write Windows.iso on linux to USB
+[WoeUSB](https://github.com/WoeUSB/WoeUSB-ng)
