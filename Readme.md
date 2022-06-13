@@ -330,3 +330,7 @@ git branch -m main
 ## Format usb on linux for windows and linux compatibility
 sudo fdisk -l
 sudo mkfs -t vfat -L FLASH /dev/sdc
+
+## Zip folder
+zip -qr backup.zip folder # Without output 
+sudo 7z a backup.zip folder # Witho percentage output
