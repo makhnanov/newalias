@@ -326,3 +326,7 @@ git branch -m main
 
 ## Write Windows.iso on linux to USB
 [WoeUSB](https://github.com/WoeUSB/WoeUSB-ng)
+
+## Format usb on linux for windows and linux compatibility
+sudo fdisk -l
+sudo mkfs -t vfat -L FLASH /dev/sdc
