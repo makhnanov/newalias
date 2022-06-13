@@ -46,3 +46,4 @@ alias hooks='xfce4-terminal -e "mc .git/hooks/"'
 alias rm-vendor='sudo rm -rf vendor/'
 
 alias suspend='systemctl suspend'
+alias shell='while true; do clear && make shell; sleep 1; done;'
