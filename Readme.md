@@ -334,3 +334,8 @@ sudo mkfs -t vfat -L FLASH /dev/sdc
 ## Zip folder
 zip -qr backup.zip folder # Without output 
 sudo 7z a backup.zip folder # Witho percentage output
+
+## Xubuntu clock date format
+```shell
+%a %_d %b(%m), %R:%S (%I:%M %p)
+```
