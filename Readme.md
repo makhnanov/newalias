@@ -349,7 +349,7 @@ sudo 7z a backup.zip folder # Witho percentage output
 ## Grub disable timeout
 ```shell
 sudo nano /etc/default/grub
-GRUB_TIMEOUT=0
+GRUB_TIMEOUT=-1
 sudo update-grub
 # https://andreyex.ru/linux/kak-izmenit-vremya-ozhidaniya-grub-v-linux/
 ```
