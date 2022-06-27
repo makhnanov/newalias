@@ -343,7 +343,7 @@ sudo 7z a backup.zip folder # Witho percentage output
 
 ## Xubuntu clock date format
 ```shell
-%a %_d %b(%m), %R:%S (%I:%M %p)
+%A %_d %b (%m) %G, %j days, (%I:%M %p), <b>%T</b>
 ```
 
 ## Grub disable timeout
