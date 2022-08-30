@@ -330,3 +330,6 @@ git branch -m main
 ## Format usb on linux for windows and linux compatibility
 sudo fdisk -l
 sudo mkfs -t vfat -L FLASH /dev/sdc
+
+## Zip folder
+zip -r output_file.zip file1 folder1
