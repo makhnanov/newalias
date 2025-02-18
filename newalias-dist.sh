@@ -48,6 +48,3 @@ alias rm-vendor='sudo rm -rf vendor/ 2>/dev/null || rm -rf vendor/'
 alias suspend='systemctl suspend'
 alias shell='while true; do clear && make shell; sleep 1; done;'
 
-mkcd() {
-  mkdir -p "$1" && cd "$1"
-}

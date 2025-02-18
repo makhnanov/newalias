@@ -103,3 +103,7 @@ _newalias() {
 }
 
 complete -F _newalias newalias
+
+mkcd() {
+  mkdir -p "$1" && cd "$1"
+}
